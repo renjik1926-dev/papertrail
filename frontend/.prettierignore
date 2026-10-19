@@ -1,0 +1,7 @@
+dist
+node_modules
+public/demo
+src/api/openapi.json
+package-lock.json
+test-results
+playwright-report

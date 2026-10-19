@@ -49,7 +49,7 @@ def test_run_with_replay(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("PAPERTRAIL_PROVIDER", "replay")
     result = runner.invoke(app, ["run", str(EVAL_DOCS / "medical_bill_01.pdf")])
     assert result.exit_code == 0, result.output
-    assert "[ok]" in result.stdout and "[rejected]" in result.stdout
+    assert "[ok]" in result.stdout and "verified" in result.stdout
     as_json = runner.invoke(app, ["run", "--json", str(EVAL_DOCS / "medical_bill_01.pdf")])
     assert json.loads(as_json.stdout)["document_date"] == "2026-10-20"
 
@@ -97,7 +97,13 @@ def test_eval_with_replay(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> No
     monkeypatch.chdir(REPO)
     result = runner.invoke(app, ["eval", "--split", "dev", "--out", str(tmp_path / "reports")])
     assert result.exit_code == 0, result.output
-    assert "Wrong-but-verified" in result.stdout and "hand-written placeholders" in result.stdout
+    assert "Wrong-but-verified" in result.stdout
+    # The report must warn about placeholders exactly when any saved answer isn't from Claude.
+    placeholders = any(
+        json.loads(p.read_text(encoding="utf-8")).get("source") != "claude"
+        for p in (REPO / "eval" / "recorded").glob("*.json")
+    )
+    assert ("hand-written placeholders" in result.stdout) == placeholders
     assert list((tmp_path / "reports").glob("*.json"))
 
 

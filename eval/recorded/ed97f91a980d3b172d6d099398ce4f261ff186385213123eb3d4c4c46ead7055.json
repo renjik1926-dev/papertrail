@@ -1,8 +1,8 @@
 {
   "format": 1,
   "request_hash": "ed97f91a980d3b172d6d099398ce4f261ff186385213123eb3d4c4c46ead7055",
-  "source": "hand-written placeholder",
-  "note": "Written by hand to stand in for a real Claude response (no API key was available). Replace with `papertrail record`.",
+  "source": "claude",
+  "note": "",
   "document": "tax_notice_01.pdf",
   "document_sha256": "9bd31d4ced24bd6049df6ed6b65227bddb25b6bb14f3952e2649da06a88daa17",
   "settings": {
@@ -10,24 +10,38 @@
     "effort": "medium",
     "prompt_version": "extract_v1"
   },
-  "recorded_at": "2026-10-19T00:00:00Z",
+  "recorded_at": "2026-10-19T23:46:36Z",
   "response": {
-    "id": "placeholder-tax_notice_01",
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgCVDfoqzTzZcAbnFKrnb",
     "type": "message",
     "role": "assistant",
-    "model": "claude-haiku-5-5",
     "content": [
       {
         "type": "text",
-        "text": "{\"document_type\":\"tax\",\"document_date_text\":\"November 2, 2026\",\"actions\":[{\"quote\":\"Pay the full amount by December 2, 2026, or set up a payment plan by December 16, 2026.\",\"block_ids\":[\"p1:b8\"],\"text\":\"Pay the $1,240.00 in full, or set up a payment plan.\",\"requirement\":\"required\",\"condition\":\"\"},{\"quote\":\"If you disagree with this change, you must respond within 60 days of the date of this notice.\",\"block_ids\":[\"p1:b10\"],\"text\":\"Respond to the department if you disagree with the change.\",\"requirement\":\"conditional\",\"condition\":\"If you disagree with this change\"}],\"documents\":[{\"quote\":\"Send a signed statement explaining why you disagree\",\"block_ids\":[\"p1:b10\"],\"text\":\"Signed statement explaining why you disagree\",\"requirement\":\"conditional\",\"condition\":\"If you disagree with this change\"},{\"quote\":\"along with copies of any documents that support your position.\",\"block_ids\":[\"p1:b10\"],\"text\":\"Copies of documents that support your position\",\"requirement\":\"conditional\",\"condition\":\"If you disagree with this change\"}],\"deadlines\":[{\"quote\":\"Pay the full amount by December 2, 2026\",\"block_ids\":[\"p1:b8\"],\"what\":\"Pay the full amount\",\"date_text\":\"December 2, 2026\",\"relative_amount\":0,\"relative_unit\":\"none\",\"anchor_text\":\"\",\"rule\":\"on_or_before\",\"requirement\":\"required\",\"condition\":\"\"},{\"quote\":\"or set up a payment plan by December 16, 2026.\",\"block_ids\":[\"p1:b8\"],\"what\":\"Set up a payment plan (instead of paying in full)\",\"date_text\":\"December 16, 2026\",\"relative_amount\":0,\"relative_unit\":\"none\",\"anchor_text\":\"\",\"rule\":\"on_or_before\",\"requirement\":\"optional\",\"condition\":\"\"},{\"quote\":\"you must respond within 60 days of the date of this notice.\",\"block_ids\":[\"p1:b10\"],\"what\":\"Respond if you disagree\",\"date_text\":\"\",\"relative_amount\":60,\"relative_unit\":\"calendar_days\",\"anchor_text\":\"the date of this notice\",\"rule\":\"unspecified\",\"requirement\":\"conditional\",\"condition\":\"If you disagree with this change\"}],\"amounts\":[{\"quote\":\"Amount due: $1,240.00\",\"block_ids\":[\"p1:b6\"],\"label\":\"Amount due\",\"amount_text\":\"$1,240.00\",\"role\":\"owed\"}],\"contacts\":[{\"quote\":\"Questions? Call us at 1-800-555-0142, Monday through Friday, 8 a.m. to 5 p.m.\",\"block_ids\":[\"p2:b2\"],\"label\":\"Department of Revenue\",\"method\":\"phone\",\"value\":\"1-800-555-0142\"},{\"quote\":\"You can pay online at revenue.example.gov/pay\",\"block_ids\":[\"p1:b8\"],\"label\":\"Online payment\",\"method\":\"website\",\"value\":\"revenue.example.gov/pay\"}],\"uncertainties\":[{\"quote\":\"or set up a payment plan by December 16, 2026.\",\"block_ids\":[\"p1:b8\"],\"issue\":\"The letter does not explain how to set up a payment plan.\"}]}"
+        "text": "{\"document_type\": \"tax\", \"document_date_text\": \"November 2, 2026\", \"actions\": [{\"quote\": \"Pay the full amount by December 2, 2026, or set up a payment plan by December 16, 2026.\", \"block_ids\": [\"p1:b8\"], \"text\": \"Pay the full amount due by December 2, 2026, or set up a payment plan by December 16, 2026.\", \"requirement\": \"required\", \"condition\": \"\"}, {\"quote\": \"If you disagree with this change, you must respond within 60 days of the date of this notice.\", \"block_ids\": [\"p1:b10\"], \"text\": \"Respond to the notice with a signed statement explaining why you disagree.\", \"requirement\": \"conditional\", \"condition\": \"If you disagree with this change\"}, {\"quote\": \"Send a signed statement explaining why you disagree, along with copies of any documents that support your position.\", \"block_ids\": [\"p1:b10\"], \"text\": \"Send a signed statement explaining why you disagree, with copies of supporting documents.\", \"requirement\": \"conditional\", \"condition\": \"If you disagree with this change\"}], \"documents\": [{\"quote\": \"copies of any documents that support your position.\", \"block_ids\": [\"p1:b10\"], \"text\": \"Copies of any documents that support your position.\", \"requirement\": \"conditional\", \"condition\": \"If you disagree with this change\"}], \"deadlines\": [{\"quote\": \"Pay the full amount by December 2, 2026\", \"block_ids\": [\"p1:b8\"], \"what\": \"Pay the full amount due\", \"date_text\": \"December 2, 2026\", \"relative_amount\": 0, \"relative_unit\": \"none\", \"anchor_text\": \"\", \"rule\": \"on_or_before\", \"requirement\": \"required\", \"condition\": \"\"}, {\"quote\": \"set up a payment plan by December 16, 2026\", \"block_ids\": [\"p1:b8\"], \"what\": \"Set up a payment plan\", \"date_text\": \"December 16, 2026\", \"relative_amount\": 0, \"relative_unit\": \"none\", \"anchor_text\": \"\", \"rule\": \"on_or_before\", \"requirement\": \"required\", \"condition\": \"\"}, {\"quote\": \"you must respond within 60 days of the date of this notice.\", \"block_ids\": [\"p1:b10\"], \"what\": \"Respond to the notice if you disagree\", \"date_text\": \"\", \"relative_amount\": 60, \"relative_unit\": \"calendar_days\", \"anchor_text\": \"the date of this notice\", \"rule\": \"unspecified\", \"requirement\": \"conditional\", \"condition\": \"If you disagree with this change\"}], \"amounts\": [{\"quote\": \"Amount due: $1,240.00\", \"block_ids\": [\"p1:b6\"], \"label\": \"Amount due\", \"amount_text\": \"$1,240.00\", \"role\": \"owed\"}], \"contacts\": [{\"quote\": \"Call us at 1-800-555-0142\", \"block_ids\": [\"p2:b2\"], \"label\": \"Department of Revenue\", \"method\": \"phone\", \"value\": \"1-800-555-0142\"}, {\"quote\": \"Mail: Example State Department of Revenue, PO Box 1234, Springfield, EX 00000\", \"block_ids\": [\"p2:b3\"], \"label\": \"Department of Revenue mailing address\", \"method\": \"mail\", \"value\": \"Example State Department of Revenue, PO Box 1234, Springfield, EX 00000\"}, {\"quote\": \"revenue.example.gov/pay\", \"block_ids\": [\"p1:b8\"], \"label\": \"Online payment\", \"method\": \"website\", \"value\": \"revenue.example.gov/pay\"}], \"uncertainties\": [{\"quote\": \"Pay the full amount by December 2, 2026, or set up a payment plan by December 16, 2026.\", \"block_ids\": [\"p1:b8\"], \"issue\": \"The letter gives two alternatives (pay in full or set up a plan); they are combined as one action with a deadline for each option.\"}]}"
       }
     ],
+    "container": null,
     "stop_reason": "end_turn",
     "stop_sequence": null,
     "stop_details": null,
     "usage": {
-      "input_tokens": 0,
-      "output_tokens": 0
-    }
+      "input_tokens": 4709,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1253,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
   }
 }

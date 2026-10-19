@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# App data (documents stay on your machine)
+data/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Frontend
+node_modules/
+dist/
+backend/papertrail/static/

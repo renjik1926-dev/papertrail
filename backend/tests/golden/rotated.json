@@ -1,0 +1,91 @@
+{
+ "parser_version": "layout-1",
+ "pages": [
+  {
+   "page_no": 1,
+   "width": 792.0,
+   "height": 612.0,
+   "is_scanned": false
+  }
+ ],
+ "blocks": [
+  {
+   "id": "p1:b1",
+   "page_no": 1,
+   "seq": 1,
+   "text": "Department of Example Services\nPO Box 42\nSpringfield, EX 00000",
+   "bbox": [
+    684.62,
+    72.0,
+    725.62,
+    226.16
+   ],
+   "words": 10
+  },
+  {
+   "id": "p1:b2",
+   "page_no": 1,
+   "seq": 2,
+   "text": "Notice date: March 3, 2027",
+   "bbox": [
+    656.12,
+    419.43,
+    667.12,
+    540.0
+   ],
+   "words": 5
+  },
+  {
+   "id": "p1:b3",
+   "page_no": 1,
+   "seq": 3,
+   "text": "Request for information",
+   "bbox": [
+    617.76,
+    72.0,
+    632.76,
+    226.71
+   ],
+   "words": 3
+  },
+  {
+   "id": "p1:b4",
+   "page_no": 1,
+   "seq": 4,
+   "text": "You must respond within 60 days of the date of this notice. Send a copy of your lease.",
+   "bbox": [
+    594.62,
+    72.0,
+    605.62,
+    449.75
+   ],
+   "words": 18
+  },
+  {
+   "id": "p1:b5",
+   "page_no": 1,
+   "seq": 5,
+   "text": "Make your pay-\nment through the online portal or send a check by mail to the address above.",
+   "bbox": [
+    556.37,
+    72.0,
+    582.37,
+    407.47
+   ],
+   "words": 18
+  },
+  {
+   "id": "p1:b6",
+   "page_no": 1,
+   "seq": 6,
+   "text": "Call 1-800-555-0100 with questions.",
+   "bbox": [
+    532.37,
+    72.0,
+    543.37,
+    233.82
+   ],
+   "words": 4
+  }
+ ]
+}

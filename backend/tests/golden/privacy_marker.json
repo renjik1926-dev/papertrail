@@ -1,0 +1,78 @@
+{
+ "parser_version": "layout-1",
+ "pages": [
+  {
+   "page_no": 1,
+   "width": 612.0,
+   "height": 792.0,
+   "is_scanned": false
+  }
+ ],
+ "blocks": [
+  {
+   "id": "p1:b1",
+   "page_no": 1,
+   "seq": 1,
+   "text": "Example Privacy Test Office",
+   "bbox": [
+    72.0,
+    66.38,
+    205.41,
+    77.38
+   ],
+   "words": 4
+  },
+  {
+   "id": "p1:b2",
+   "page_no": 1,
+   "seq": 2,
+   "text": "Notice date: May 4, 2027",
+   "bbox": [
+    427.97,
+    94.88,
+    540.0,
+    105.88
+   ],
+   "words": 5
+  },
+  {
+   "id": "p1:b3",
+   "page_no": 1,
+   "seq": 3,
+   "text": "Reference code ZQXMARKER7731 appears only in this test letter.",
+   "bbox": [
+    72.0,
+    124.13,
+    368.41,
+    135.13
+   ],
+   "words": 9
+  },
+  {
+   "id": "p1:b4",
+   "page_no": 1,
+   "seq": 4,
+   "text": "Return the signed ZQXMARKER7731 consent form by June 1, 2027.",
+   "bbox": [
+    72.0,
+    148.13,
+    379.44,
+    159.13
+   ],
+   "words": 10
+  },
+  {
+   "id": "p1:b5",
+   "page_no": 1,
+   "seq": 5,
+   "text": "The fee for this request is $12.00.",
+   "bbox": [
+    72.0,
+    172.13,
+    219.75,
+    183.13
+   ],
+   "words": 7
+  }
+ ]
+}

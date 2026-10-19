@@ -1,0 +1,34 @@
+document: benefits_renewal_01.pdf
+document_date: 2026-11-09
+items:
+  - kind: action
+    text: complete the renewal form and mail it
+    page: 1
+    quote_contains: "Complete the enclosed renewal form"
+  - kind: action
+    text: call to schedule a renewal interview
+    page: 1
+    quote_contains: "call us to schedule a renewal interview"
+  - kind: document
+    text: completed renewal form
+    page: 1
+    quote_contains: "renewal form"
+  - kind: document
+    text: pay stubs from the last 30 days if income changed
+    page: 1
+    quote_contains: "pay stubs from the last 30 days"
+  - kind: deadline
+    what: renewal form postmarked
+    due: 2026-12-15
+    page: 1
+    quote_contains: "postmarked by"
+  - kind: deadline
+    what: call to schedule the interview
+    due: 2026-11-23
+    page: 1
+    quote_contains: "within 10 business days"
+  - kind: contact
+    text: phone 1-800-555-0123
+    page: 1
+    quote_contains: "1-800-555-0123"
+must_not_include: []

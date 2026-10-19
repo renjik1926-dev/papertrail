@@ -1,0 +1,6 @@
+<document pages="1">
+[p1:b1] Example Smoke Test Office
+[p1:b2] Notice date: January 10, 2030
+[p1:b3] Please return the enclosed form within 30 days of the date of this notice.
+[p1:b4] A processing fee of $15.00 is due by February 1, 2030. Call 555-0199 with questions.
+</document>

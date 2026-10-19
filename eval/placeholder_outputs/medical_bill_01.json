@@ -1,0 +1,82 @@
+{
+  "document_type": "medical_bill",
+  "document_date_text": "October 20, 2026",
+  "actions": [
+    {
+      "quote": "Please pay by November 19, 2026.",
+      "block_ids": [
+        "p1:b7"
+      ],
+      "text": "Pay the amount due.",
+      "requirement": "required",
+      "condition": ""
+    },
+    {
+      "quote": "If you are unable to pay the full amount, you may apply for financial assistance.",
+      "block_ids": [
+        "p1:b9"
+      ],
+      "text": "Apply for financial assistance.",
+      "requirement": "conditional",
+      "condition": "If you are unable to pay the full amount"
+    },
+    {
+      "quote": "Please call to confirm your insurance details.",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "text": "Call to confirm your insurance details.",
+      "requirement": "required",
+      "condition": ""
+    }
+  ],
+  "documents": [],
+  "deadlines": [
+    {
+      "quote": "Please pay by November 19, 2026.",
+      "block_ids": [
+        "p1:b7"
+      ],
+      "what": "Pay the amount due",
+      "date_text": "November 19, 2026",
+      "relative_amount": 0,
+      "relative_unit": "none",
+      "anchor_text": "",
+      "rule": "on_or_before",
+      "requirement": "required",
+      "condition": ""
+    }
+  ],
+  "amounts": [
+    {
+      "quote": "Amount due: $237.60",
+      "block_ids": [
+        "p1:b6"
+      ],
+      "label": "Amount due",
+      "amount_text": "$237.60",
+      "role": "owed"
+    }
+  ],
+  "contacts": [
+    {
+      "quote": "call our billing office at 1-800-555-0177.",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "label": "Billing office",
+      "method": "phone",
+      "value": "1-800-555-0177"
+    },
+    {
+      "quote": "Pay online at pay.riverside-example.org",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "label": "Online payment",
+      "method": "website",
+      "value": "pay.riverside-example.org"
+    }
+  ],
+  "uncertainties": []
+}

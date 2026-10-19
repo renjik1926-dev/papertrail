@@ -1,0 +1,82 @@
+{
+  "document_type": "university",
+  "document_date_text": "October 26, 2026",
+  "actions": [
+    {
+      "quote": "Upload documents through the student portal at portal.example-state.edu or email them to finaid@example-state.edu.",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "text": "Submit your verification documents through the portal or by email.",
+      "requirement": "required",
+      "condition": ""
+    }
+  ],
+  "documents": [
+    {
+      "quote": "1. A signed Verification Worksheet",
+      "block_ids": [
+        "p1:b5"
+      ],
+      "text": "Signed Verification Worksheet",
+      "requirement": "required",
+      "condition": ""
+    },
+    {
+      "quote": "A copy of your federal tax return transcript for 2025",
+      "block_ids": [
+        "p1:b5"
+      ],
+      "text": "2025 federal tax return transcript",
+      "requirement": "required",
+      "condition": ""
+    },
+    {
+      "quote": "If you are a dependent student, you must also submit a copy of your parent's 2025 tax return transcript.",
+      "block_ids": [
+        "p1:b7"
+      ],
+      "text": "Your parent's 2025 tax return transcript",
+      "requirement": "conditional",
+      "condition": "If you are a dependent student"
+    }
+  ],
+  "deadlines": [
+    {
+      "quote": "Your documents must be received by December 1, 2026.",
+      "block_ids": [
+        "p1:b6"
+      ],
+      "what": "Submit verification documents",
+      "date_text": "December 1, 2026",
+      "relative_amount": 0,
+      "relative_unit": "none",
+      "anchor_text": "",
+      "rule": "received_by",
+      "requirement": "required",
+      "condition": ""
+    }
+  ],
+  "amounts": [],
+  "contacts": [
+    {
+      "quote": "email them to finaid@example-state.edu.",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "label": "Office of Financial Aid",
+      "method": "email",
+      "value": "finaid@example-state.edu"
+    },
+    {
+      "quote": "Upload documents through the student portal at portal.example-state.edu",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "label": "Student portal",
+      "method": "website",
+      "value": "portal.example-state.edu"
+    }
+  ],
+  "uncertainties": []
+}

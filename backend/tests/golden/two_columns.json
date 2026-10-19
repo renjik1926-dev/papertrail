@@ -1,0 +1,52 @@
+{
+ "parser_version": "layout-1",
+ "pages": [
+  {
+   "page_no": 1,
+   "width": 612.0,
+   "height": 792.0,
+   "is_scanned": false
+  }
+ ],
+ "blocks": [
+  {
+   "id": "p1:b1",
+   "page_no": 1,
+   "seq": 1,
+   "text": "Community newsletter and notice",
+   "bbox": [
+    72.0,
+    85.74,
+    287.95,
+    100.74
+   ],
+   "words": 4
+  },
+  {
+   "id": "p1:b2",
+   "page_no": 1,
+   "seq": 2,
+   "text": "Left column. The library will close early on Right column. Your permit renewal fee of\nFriday for staff training. Regular hours resume $45.00 is due by April 30, 2027. Pay at the town\non Monday morning. hall or online.",
+   "bbox": [
+    72.0,
+    112.88,
+    536.81,
+    153.13
+   ],
+   "words": 39
+  },
+  {
+   "id": "p1:b3",
+   "page_no": 1,
+   "seq": 3,
+   "text": "Recycling pickup moves to Thursdays starting Questions about permits can be sent to\nnext month. Place bins at the curb by 7 a.m. permits@town.example.org.",
+   "bbox": [
+    72.0,
+    166.13,
+    493.74,
+    192.13
+   ],
+   "words": 24
+  }
+ ]
+}

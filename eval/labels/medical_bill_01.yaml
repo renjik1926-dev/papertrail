@@ -1,0 +1,29 @@
+document: medical_bill_01.pdf
+document_date: 2026-10-20
+items:
+  - kind: action
+    text: pay the amount due
+    page: 1
+    quote_contains: "Please pay by November 19, 2026"
+  - kind: action
+    text: apply for financial assistance if you can't pay the full amount
+    page: 1
+    quote_contains: "apply for financial assistance"
+  - kind: deadline
+    what: pay the amount due
+    due: 2026-11-19
+    page: 1
+    quote_contains: "by November 19, 2026"
+  - kind: amount
+    role: owed
+    cents: 23760
+    page: 1
+  - kind: contact
+    text: billing office phone 1-800-555-0177
+    page: 1
+    quote_contains: "1-800-555-0177"
+  - kind: contact
+    text: pay online at pay.riverside-example.org
+    page: 1
+    quote_contains: "pay.riverside-example.org"
+must_not_include: []

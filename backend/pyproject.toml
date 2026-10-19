@@ -1,0 +1,99 @@
+[project]
+name = "papertrail"
+version = "0.1.0.dev0"
+description = "Turn a confusing letter (PDF) into a checklist where every item links to the passage it came from."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [{ name = "renjik1926-dev" }]
+dependencies = [
+    "anthropic>=1.15.0",
+    "dateparser>=1.4.3",
+    "fastapi>=0.146.0",
+    "icalendar>=7.3.0",
+    "pdfplumber>=0.11.10",
+    "platformdirs>=4.13.5",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.0",
+    "python-dateutil>=2.9.0.post0",
+    "python-multipart>=0.0.32",
+    "pyyaml>=6.0.3",
+    "rapidfuzz>=3.14.6",
+    "typer>=0.27.3",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+papertrail = "papertrail.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "hypothesis>=6.170.2",
+    "mypy>=2.4.0",
+    "pypdf>=6.21.1",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.1",
+    "types-python-dateutil>=2.9.0.20260807",
+    "types-pyyaml>=6.0.12.20260906",
+]
+fixtures = [
+    "playwright==1.56.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["papertrail"]
+# The built frontend is copied into papertrail/static/ by the release workflow.
+# It is git-ignored, so it must be listed here to land in the wheel.
+artifacts = ["papertrail/static/**"]
+
+[tool.hatch.build.targets.sdist]
+include = ["papertrail", "README.md"]
+artifacts = ["papertrail/static/**"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "C4", "RUF", "S", "PTH", "RET", "PL"]
+ignore = [
+    "PLR0911", "PLR0912", "PLR0913", "PLR0915", "PLR2004",  # complexity limits: too noisy for parsers
+    "E501",    # the formatter handles line length; long SQL/strings may exceed it
+    "S101",    # assert is fine in tests and for invariants
+    "S603", "S607",  # subprocess calls are not used with user input
+    "RUF001", "RUF002", "RUF003",  # we deliberately handle curly quotes and dashes
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "PLC0415", "PLW0603"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+files = ["papertrail", "tests"]
+
+[[tool.mypy.overrides]]
+module = ["pdfplumber.*", "pdfminer.*", "dateparser.*", "icalendar.*", "rapidfuzz.*", "pypdf.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = ["slow: performance tests, run nightly"]
+filterwarnings = ["error::pytest.PytestUnraisableExceptionWarning"]
+
+[tool.coverage.run]
+source = ["papertrail"]
+branch = true

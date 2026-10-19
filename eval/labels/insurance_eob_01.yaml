@@ -1,0 +1,35 @@
+document: insurance_eob_01.pdf
+document_date: 2026-10-05
+items:
+  - kind: action
+    text: file an appeal if you disagree with how the claim was processed
+    page: 1
+    quote_contains: "file an appeal"
+  - kind: document
+    text: appeal and supporting documents
+    page: 1
+    quote_contains: "supporting documents"
+  - kind: deadline
+    what: file an appeal
+    due: 2027-04-03
+    page: 1
+    quote_contains: "within 180 days of the date of this statement"
+  - kind: amount
+    role: charged
+    cents: 85000
+    page: 1
+  - kind: amount
+    role: paid_by_insurer
+    cents: 61240
+    page: 1
+  - kind: amount
+    role: balance
+    cents: 23760
+    page: 1
+  - kind: contact
+    text: member services phone 1-800-555-0199
+    page: 1
+    quote_contains: "1-800-555-0199"
+must_not_include:
+  - kind: amount
+    role: owed

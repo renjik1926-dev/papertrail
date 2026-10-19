@@ -1,0 +1,49 @@
+document: tax_notice_01.pdf
+document_date: 2026-11-02
+items:
+  - kind: action
+    text: pay the full amount or set up a payment plan
+    page: 1
+    quote_contains: "Pay the full amount by December 2, 2026"
+  - kind: action
+    text: respond if you disagree with the change
+    page: 1
+    quote_contains: "you must respond within 60 days"
+  - kind: document
+    text: signed statement explaining why you disagree
+    page: 1
+    quote_contains: "signed statement"
+  - kind: document
+    text: copies of documents that support your position
+    page: 1
+    quote_contains: "copies of any documents"
+  - kind: deadline
+    what: pay the full amount
+    due: 2026-12-02
+    page: 1
+    quote_contains: "by December 2, 2026"
+  - kind: deadline
+    what: set up a payment plan
+    due: 2026-12-16
+    page: 1
+    quote_contains: "by December 16, 2026"
+  - kind: deadline
+    what: respond if you disagree
+    due: 2027-01-01
+    page: 1
+    quote_contains: "within 60 days of the date of this notice"
+  - kind: amount
+    role: owed
+    cents: 124000
+    page: 1
+  - kind: contact
+    text: phone 1-800-555-0142
+    page: 2
+    quote_contains: "1-800-555-0142"
+  - kind: contact
+    text: pay online at revenue.example.gov/pay
+    page: 1
+    quote_contains: "revenue.example.gov/pay"
+must_not_include:
+  - kind: action
+    quote_contains: "keep this notice for your records"

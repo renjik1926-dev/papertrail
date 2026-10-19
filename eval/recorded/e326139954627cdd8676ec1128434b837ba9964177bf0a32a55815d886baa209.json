@@ -1,0 +1,33 @@
+{
+  "format": 1,
+  "request_hash": "e326139954627cdd8676ec1128434b837ba9964177bf0a32a55815d886baa209",
+  "source": "hand-written placeholder",
+  "note": "Written by hand to stand in for a real Claude response (no API key was available). Replace with `papertrail record`.",
+  "document": "benefits_renewal_01.pdf",
+  "document_sha256": "c3e1f7fafb0780552468274d933811fdceef986121791c78af8e22f3d148f2dd",
+  "settings": {
+    "model": "claude-haiku-5-5",
+    "effort": "medium",
+    "prompt_version": "extract_v1"
+  },
+  "recorded_at": "2026-10-19T00:00:00Z",
+  "response": {
+    "id": "placeholder-benefits_renewal_01",
+    "type": "message",
+    "role": "assistant",
+    "model": "claude-haiku-5-5",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"document_type\":\"government\",\"document_date_text\":\"November 9, 2026\",\"actions\":[{\"quote\":\"Complete the enclosed renewal form and mail it to us.\",\"block_ids\":[\"p1:b6\"],\"text\":\"Complete the renewal form and mail it.\",\"requirement\":\"required\",\"condition\":\"\"},{\"quote\":\"You must call us to schedule a renewal interview within 10 business days of the date of this letter.\",\"block_ids\":[\"p1:b8\"],\"text\":\"Call to schedule a renewal interview.\",\"requirement\":\"required\",\"condition\":\"\"}],\"documents\":[{\"quote\":\"Complete the enclosed renewal form and mail it to us.\",\"block_ids\":[\"p1:b6\"],\"text\":\"Completed renewal form\",\"requirement\":\"required\",\"condition\":\"\"},{\"quote\":\"If your household income has changed, include pay stubs from the last 30 days.\",\"block_ids\":[\"p1:b7\"],\"text\":\"Pay stubs from the last 30 days\",\"requirement\":\"conditional\",\"condition\":\"If your household income has changed\"}],\"deadlines\":[{\"quote\":\"Your renewal form must be postmarked by December 15, 2026.\",\"block_ids\":[\"p1:b6\"],\"what\":\"Mail the renewal form\",\"date_text\":\"December 15, 2026\",\"relative_amount\":0,\"relative_unit\":\"none\",\"anchor_text\":\"\",\"rule\":\"postmarked_by\",\"requirement\":\"required\",\"condition\":\"\"},{\"quote\":\"within 10 business days of the date of this letter.\",\"block_ids\":[\"p1:b8\"],\"what\":\"Call to schedule a renewal interview\",\"date_text\":\"\",\"relative_amount\":10,\"relative_unit\":\"business_days\",\"anchor_text\":\"the date of this letter\",\"rule\":\"unspecified\",\"requirement\":\"required\",\"condition\":\"\"},{\"quote\":\"your assistance may end on January 31, 2027.\",\"block_ids\":[\"p1:b9\"],\"what\":\"Assistance may end\",\"date_text\":\"January 31, 2027\",\"relative_amount\":0,\"relative_unit\":\"none\",\"anchor_text\":\"\",\"rule\":\"unspecified\",\"requirement\":\"required\",\"condition\":\"\"}],\"amounts\":[],\"contacts\":[{\"quote\":\"Phone: 1-800-555-0123.\",\"block_ids\":[\"p1:b8\"],\"label\":\"Housing Assistance Program\",\"method\":\"phone\",\"value\":\"1-800-555-0123\"}],\"uncertainties\":[{\"quote\":\"If we do not receive your renewal form, your assistance may end on January 31, 2027.\",\"block_ids\":[\"p1:b9\"],\"issue\":\"This is when assistance may end if the form isn't received, not a separate deadline.\"}]}"
+      }
+    ],
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  }
+}

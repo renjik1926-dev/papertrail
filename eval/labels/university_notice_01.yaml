@@ -1,0 +1,33 @@
+document: university_notice_01.pdf
+document_date: 2026-10-26
+items:
+  - kind: action
+    text: submit verification documents through the portal or by email
+    page: 1
+    quote_contains: "Upload documents through the student portal"
+  - kind: document
+    text: signed verification worksheet
+    page: 1
+    quote_contains: "signed Verification Worksheet"
+  - kind: document
+    text: 2025 federal tax return transcript
+    page: 1
+    quote_contains: "2025 federal tax return transcript"
+  - kind: document
+    text: parent's 2025 tax return transcript
+    page: 1
+    quote_contains: "parent's 2025 tax return transcript"
+  - kind: deadline
+    what: documents received
+    due: 2026-12-01
+    page: 1
+    quote_contains: "received by December 1, 2026"
+  - kind: contact
+    text: email finaid@example-state.edu
+    page: 1
+    quote_contains: "finaid@example-state.edu"
+  - kind: contact
+    text: student portal portal.example-state.edu
+    page: 1
+    quote_contains: "portal.example-state.edu"
+must_not_include: []

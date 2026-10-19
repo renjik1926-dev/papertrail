@@ -1,0 +1,16 @@
+# Which documents are used for tuning (dev) and which are held out (test). BUILD_PLAN §12.
+# The test split is never looked at while tuning the prompt, effort or thresholds.
+# This draft has 6 letters; the plan's target is 30-40.
+dev:
+  - tax_notice_01
+  - insurance_eob_01
+  - medical_bill_01
+  - benefits_renewal_01
+test:
+  - university_notice_01
+  - adversarial_01
+# Letters shown in the static GitHub Pages demo (`papertrail export-demo`).
+demo:
+  - tax_notice_01
+  - insurance_eob_01
+  - adversarial_01

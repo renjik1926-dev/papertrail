@@ -1,0 +1,92 @@
+{
+  "document_type": "insurance",
+  "document_date_text": "October 5, 2026",
+  "actions": [
+    {
+      "quote": "you may file an appeal within 180 days of the date of this statement.",
+      "block_ids": [
+        "p1:b11"
+      ],
+      "text": "File an appeal if you disagree with how the claim was processed.",
+      "requirement": "conditional",
+      "condition": "If you disagree with how we processed this claim"
+    },
+    {
+      "quote": "Wait for a bill from your provider before you pay anything.",
+      "block_ids": [
+        "p1:b9"
+      ],
+      "text": "Wait for a bill from your provider before paying.",
+      "requirement": "required",
+      "condition": ""
+    }
+  ],
+  "documents": [
+    {
+      "quote": "Send your appeal and any supporting documents to Example Health Plan Appeals",
+      "block_ids": [
+        "p1:b11"
+      ],
+      "text": "Your appeal and any supporting documents",
+      "requirement": "conditional",
+      "condition": "If you file an appeal"
+    }
+  ],
+  "deadlines": [
+    {
+      "quote": "you may file an appeal within 180 days of the date of this statement.",
+      "block_ids": [
+        "p1:b11"
+      ],
+      "what": "File an appeal",
+      "date_text": "",
+      "relative_amount": 180,
+      "relative_unit": "calendar_days",
+      "anchor_text": "the date of this statement",
+      "rule": "unspecified",
+      "requirement": "conditional",
+      "condition": "If you disagree with how we processed this claim"
+    }
+  ],
+  "amounts": [
+    {
+      "quote": "September 14, 2026 Office visit $850.00 $612.40 $237.60",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "label": "Amount billed",
+      "amount_text": "$850.00",
+      "role": "charged"
+    },
+    {
+      "quote": "September 14, 2026 Office visit $850.00 $612.40 $237.60",
+      "block_ids": [
+        "p1:b8"
+      ],
+      "label": "Plan paid",
+      "amount_text": "$612.40",
+      "role": "paid_by_insurer"
+    },
+    {
+      "quote": "Your provider may bill you up to $237.60 for this visit.",
+      "block_ids": [
+        "p1:b9"
+      ],
+      "label": "You may owe",
+      "amount_text": "$237.60",
+      "role": "balance"
+    }
+  ],
+  "contacts": [
+    {
+      "quote": "Call Member Services at 1-800-555-0199.",
+      "block_ids": [
+        "p1:b13"
+      ],
+      "label": "Member Services",
+      "method": "phone",
+      "value": "1-800-555-0199"
+    }
+  ],
+  "uncertainties": []
+}

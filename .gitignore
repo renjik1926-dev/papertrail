@@ -16,3 +16,12 @@ __pycache__/
 node_modules/
 dist/
 backend/papertrail/static/
+
+# Generated
+.coverage
+coverage.xml
+htmlcov/
+frontend/public/demo/
+frontend/test-results/
+frontend/playwright-report/
+*.tsbuildinfo

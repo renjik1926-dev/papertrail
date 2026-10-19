@@ -70,8 +70,11 @@ ignore = [
     "RUF001", "RUF002", "RUF003",  # we deliberately handle curly quotes and dashes
 ]
 
+[tool.ruff.lint.isort]
+known-first-party = ["papertrail", "tests"]
+
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["S", "PLC0415", "PLW0603"]
+"**/tests/**" = ["S", "PLC0415", "PLW0603"]
 
 [tool.mypy]
 python_version = "3.12"

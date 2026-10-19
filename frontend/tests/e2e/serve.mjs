@@ -15,7 +15,7 @@ cpSync(dist, staticDir, { recursive: true });
 
 const child = spawn(
   "uv",
-  ["run", "--project", "../backend", "papertrail", "serve", "--port", port],
+  ["run", "--frozen", "--project", "../backend", "papertrail", "serve", "--port", port],
   {
     stdio: "inherit",
     env: process.env,

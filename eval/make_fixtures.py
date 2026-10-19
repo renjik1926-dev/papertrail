@@ -99,7 +99,8 @@ def main() -> None:
         save(cropped, FIXTURES / "cropped.pdf")
 
         encrypted = normalized(plain)
-        encrypted.encrypt(user_password="fixture-user", owner_password="fixture-owner")
+        # Throwaway passwords for a test fixture, not secrets.
+        encrypted.encrypt(user_password="fixture-user", owner_password="fixture-owner")  # noqa: S106
         save(encrypted, FIXTURES / "encrypted.pdf")
 
         save(

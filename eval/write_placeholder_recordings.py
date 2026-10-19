@@ -49,10 +49,16 @@ def main() -> int:
             return 1
         rendered = render_document(parsed.document)
         digest = request_hash(
-            model=settings.model, effort=settings.effort, prompt_text=prompt_text, rendered_document=rendered
+            model=settings.model,
+            effort=settings.effort,
+            prompt_text=prompt_text,
+            rendered_document=rendered,
         )
         existing = recording_path(recordings, digest)
-        if existing.is_file() and json.loads(existing.read_text(encoding="utf-8")).get("source") == "claude":
+        if (
+            existing.is_file()
+            and json.loads(existing.read_text(encoding="utf-8")).get("source") == "claude"
+        ):
             print(f"{pdf.name}: keeping the real recording")
             continue
         response = {

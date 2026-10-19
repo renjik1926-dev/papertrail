@@ -11,7 +11,7 @@ import pytest
 from papertrail.backup import RestoreError, create_backup, restore_backup
 from papertrail.clock import FixedClock
 from papertrail.config import Settings
-from papertrail.db.connection import SchemaTooNewError
+from papertrail.db.connection import SchemaTooNewError, connect, migrate
 from tests.conftest import EVAL_DOCS, make_client, process_all, upload
 
 
@@ -37,8 +37,6 @@ def test_restored_app_shows_the_same_items(
 def test_backup_while_a_write_transaction_is_open(
     settings: Settings, clock: FixedClock, tmp_path: Path
 ) -> None:
-    from papertrail.db.connection import connect, migrate
-
     settings.ensure_dirs()
     writer = connect(settings.db_path)
     migrate(writer, settings.db_path)

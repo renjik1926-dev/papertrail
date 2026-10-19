@@ -20,8 +20,8 @@ export function PrivacyNotice({ onAck }: { onAck: () => void }) {
 export function DemoBanner() {
   return (
     <p className="banner" role="note">
-      Demo with sample letters — results were processed ahead of time. The AI answers in this demo
-      are hand-written stand-ins until real recordings are made.
+      Demo with synthetic sample letters — results were processed ahead of time from saved Claude
+      Haiku answers, so nothing is sent anywhere.
     </p>
   );
 }

@@ -6,8 +6,8 @@ passage it came from**. Anything that can't be backed by a quote from the letter
 instead of guessed.
 
 > **Status: first draft (v0.1.0 in progress).** The pipeline, verifier, local web app, CLI and
-> tests work. The AI answers used by the tests and the demo are **hand-written placeholders**,
-> not real Claude output yet (see [Accuracy](#accuracy)). Built from
+> tests work. The saved AI answers used by the tests and the demo are **real Claude Haiku 5.5
+> responses**, recorded once for six synthetic letters (see [Accuracy](#accuracy)). Built from
 > [BUILD_PLAN.md](BUILD_PLAN.md).
 
 ## Why
@@ -53,14 +53,19 @@ shown) or **rejected** (hidden from the checklist).
 
 ## Accuracy
 
-Not measured yet. There was no API key while building this draft, so the six "recordings" in
-`eval/recorded/` were **written by hand** to stand in for Claude's answers (each file says
-`"source": "hand-written placeholder"`). They include deliberate mistakes so the verifier
-has something to catch. Running `papertrail eval` on them tests the evaluation harness and
-the verifier — **it says nothing about Claude's accuracy**, and the report says so.
+The six saved answers in `eval/recorded/` are real responses from `claude-haiku-5-5` (prompt
+`extract_v1`, effort `medium`), recorded on 2026-10-19 for six **synthetic** letters. Recording
+all six cost under one cent. Tests and the demo replay these answers, so they run without a key
+or network.
 
-Next step: `papertrail record` with a real key (a few cents), then publish the test-split
-results here (BUILD_PLAN §12).
+**No accuracy claim yet.** Four letters are the *dev* split, used while building, so their
+numbers aren't a fair test. The two held-out *test* letters will be scored once, after the
+prompt is frozen, and published here (BUILD_PLAN §12). Six letters is also far too few to say
+much: the plan's target is 30–40.
+
+Contributors without a key can still run everything: `eval/write_placeholder_recordings.py`
+writes hand-written stand-ins (marked `"source": "hand-written placeholder"`), and the eval report
+says when any are in use.
 
 ## Try it (from source)
 

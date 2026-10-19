@@ -24,8 +24,9 @@ An honest list of what PaperTrail can't do (yet).
 - An item flagged for text addressed to an AI is still shown (as needs review), not hidden.
 
 ## This draft
-- **No real model responses yet.** The saved responses are hand-written placeholders, so there
-  are no accuracy numbers. See the README.
+- **Tiny evaluation set.** Six synthetic letters, with real recorded Claude responses
+  (2026-10-19). The held-out test split hasn't been scored yet, so there's no accuracy claim.
+  See the README.
 - CI runs on Ubuntu only; Windows and macOS (including the child-process timeout on Windows)
   are not tested yet.
 - Calendar reminders inside the `.ics` file haven't been checked in Google Calendar, Outlook

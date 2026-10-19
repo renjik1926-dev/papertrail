@@ -1,8 +1,8 @@
 {
   "format": 1,
   "request_hash": "07e30b1da39a4898193af01930451d94149acfe2a36b6118503c66ae1f4b7bf8",
-  "source": "hand-written placeholder",
-  "note": "Written by hand to stand in for a real Claude response (no API key was available). Replace with `papertrail record`.",
+  "source": "claude",
+  "note": "",
   "document": "medical_bill_01.pdf",
   "document_sha256": "9026d5928a9d786d6b30fa68a549532e5a44e7d5b159712d0d87c38d9fe7e8c0",
   "settings": {
@@ -10,24 +10,43 @@
     "effort": "medium",
     "prompt_version": "extract_v1"
   },
-  "recorded_at": "2026-10-19T00:00:00Z",
+  "recorded_at": "2026-10-19T23:46:43Z",
   "response": {
-    "id": "placeholder-medical_bill_01",
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgCVE5WNNfo7pY88wADs4",
     "type": "message",
     "role": "assistant",
-    "model": "claude-haiku-5-5",
     "content": [
       {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
         "type": "text",
-        "text": "{\"document_type\":\"medical_bill\",\"document_date_text\":\"October 20, 2026\",\"actions\":[{\"quote\":\"Please pay by November 19, 2026.\",\"block_ids\":[\"p1:b7\"],\"text\":\"Pay the amount due.\",\"requirement\":\"required\",\"condition\":\"\"},{\"quote\":\"If you are unable to pay the full amount, you may apply for financial assistance.\",\"block_ids\":[\"p1:b9\"],\"text\":\"Apply for financial assistance.\",\"requirement\":\"conditional\",\"condition\":\"If you are unable to pay the full amount\"},{\"quote\":\"Please call to confirm your insurance details.\",\"block_ids\":[\"p1:b8\"],\"text\":\"Call to confirm your insurance details.\",\"requirement\":\"required\",\"condition\":\"\"}],\"documents\":[],\"deadlines\":[{\"quote\":\"Please pay by November 19, 2026.\",\"block_ids\":[\"p1:b7\"],\"what\":\"Pay the amount due\",\"date_text\":\"November 19, 2026\",\"relative_amount\":0,\"relative_unit\":\"none\",\"anchor_text\":\"\",\"rule\":\"on_or_before\",\"requirement\":\"required\",\"condition\":\"\"}],\"amounts\":[{\"quote\":\"Amount due: $237.60\",\"block_ids\":[\"p1:b6\"],\"label\":\"Amount due\",\"amount_text\":\"$237.60\",\"role\":\"owed\"}],\"contacts\":[{\"quote\":\"call our billing office at 1-800-555-0177.\",\"block_ids\":[\"p1:b8\"],\"label\":\"Billing office\",\"method\":\"phone\",\"value\":\"1-800-555-0177\"},{\"quote\":\"Pay online at pay.riverside-example.org\",\"block_ids\":[\"p1:b8\"],\"label\":\"Online payment\",\"method\":\"website\",\"value\":\"pay.riverside-example.org\"}],\"uncertainties\":[]}"
+        "text": "{\"document_type\": \"medical_bill\", \"document_date_text\": \"October 20, 2026\", \"actions\": [{\"quote\": \"Please pay by November 19, 2026.\", \"block_ids\": [\"p1:b7\"], \"text\": \"Pay the amount due of $237.60 by November 19, 2026, online at pay.riverside-example.org or by calling the billing office.\", \"requirement\": \"required\", \"condition\": \"\"}, {\"quote\": \"you may apply for financial assistance\", \"block_ids\": [\"p1:b9\"], \"text\": \"Ask for a financial assistance application by calling the billing office number.\", \"requirement\": \"conditional\", \"condition\": \"If you are unable to pay the full amount\"}], \"documents\": [], \"deadlines\": [{\"quote\": \"Please pay by November 19, 2026.\", \"block_ids\": [\"p1:b7\"], \"what\": \"Pay the amount due\", \"date_text\": \"November 19, 2026\", \"relative_amount\": 0, \"relative_unit\": \"none\", \"anchor_text\": \"\", \"rule\": \"unspecified\", \"requirement\": \"required\", \"condition\": \"\"}], \"amounts\": [{\"quote\": \"Amount due: $237.60\", \"block_ids\": [\"p1:b6\"], \"label\": \"Amount due\", \"amount_text\": \"$237.60\", \"role\": \"owed\"}], \"contacts\": [{\"quote\": \"call our billing office at 1-800-555-0177\", \"block_ids\": [\"p1:b8\"], \"label\": \"Billing office\", \"method\": \"phone\", \"value\": \"1-800-555-0177\"}, {\"quote\": \"Pay online at pay.riverside-example.org\", \"block_ids\": [\"p1:b8\"], \"label\": \"Online payment\", \"method\": \"website\", \"value\": \"pay.riverside-example.org\"}], \"uncertainties\": []}"
       }
     ],
+    "container": null,
     "stop_reason": "end_turn",
     "stop_sequence": null,
     "stop_details": null,
     "usage": {
-      "input_tokens": 0,
-      "output_tokens": 0
-    }
+      "input_tokens": 4438,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1603,
+      "output_tokens_details": {
+        "thinking_tokens": 1033
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
   }
 }

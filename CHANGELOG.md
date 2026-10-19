@@ -17,5 +17,11 @@ First draft built from BUILD_PLAN.md v1.4.
 - Evaluation harness with six synthetic letters and answer keys.
 - CI, Pages and release workflows.
 
+### Changed
+- The six saved model responses in `eval/recorded/` are now real `claude-haiku-5-5` answers
+  (prompt `extract_v1`, effort `medium`, recorded 2026-10-19), replacing the hand-written
+  placeholders. The placeholder writer remains for contributors without a key.
+
 ### Known gaps
-- Saved model responses are hand-written placeholders; no accuracy results yet.
+- No accuracy results yet: the held-out test split hasn't been scored, and six letters is far
+  below the planned 30–40.

@@ -22,6 +22,11 @@ First draft built from BUILD_PLAN.md v1.4.
   (prompt `extract_v1`, effort `medium`, recorded 2026-10-19), replacing the hand-written
   placeholders. The placeholder writer remains for contributors without a key.
 
+### Fixed
+- The startup sweep no longer deletes files less than an hour old. Before, starting the server
+  while another PaperTrail process was mid-upload or mid-backup could delete that process's PDF or
+  backup snapshot.
+
 ### Known gaps
 - No accuracy results yet: the held-out test split hasn't been scored, and six letters is far
   below the planned 30–40.

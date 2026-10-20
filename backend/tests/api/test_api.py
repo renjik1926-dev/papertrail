@@ -3,13 +3,16 @@
 from __future__ import annotations
 
 import io
+import os
 import sqlite3
+import time
 from pathlib import Path
 
 from fastapi.testclient import TestClient
 
 from papertrail.ingest import clean_filename
 from papertrail.jobs import Worker
+from papertrail.store import SWEEP_MIN_AGE_S
 from tests.conftest import EVAL_DOCS, FIXTURES, HEADERS, process_all, upload
 
 
@@ -277,6 +280,10 @@ def test_orphan_files_are_swept_on_startup(client_factory, settings) -> None:
     orphan_run = settings.runs_dir / "00000000-0000-0000-0000-000000000000.json"
     orphan_pdf.write_bytes(b"%PDF-")
     orphan_run.write_text("{}")
+    # Leftovers from an earlier crash are old; the sweep leaves files newer than SWEEP_MIN_AGE_S alone.
+    then = time.time() - SWEEP_MIN_AGE_S - 60
+    for path in (orphan_pdf, orphan_run):
+        os.utime(path, (then, then))
     client_factory()
     assert not orphan_pdf.exists() and not orphan_run.exists()
 

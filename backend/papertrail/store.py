@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import time
 import uuid
 from pathlib import Path
 from typing import Any
@@ -167,21 +168,35 @@ def delete_document(conn: sqlite3.Connection, settings: Settings, document_id: s
     return True
 
 
+# A file this new may belong to another PaperTrail process that's still working on it: an upload
+# moved into files/ just before its row is written, or a backup snapshot in tmp/. The sweep leaves
+# those for a later start.
+SWEEP_MIN_AGE_S = 3600
+
+
+def _settled(path: Path, now: float) -> bool:
+    try:
+        return now - path.stat().st_mtime >= SWEEP_MIN_AGE_S
+    except OSError:
+        return False
+
+
 def orphan_sweep(conn: sqlite3.Connection, settings: Settings) -> int:
     """Finish deletions that failed earlier: files with no matching row are removed."""
     removed = 0
+    now = time.time()
     hashes = repo.all_document_hashes(conn)
     if settings.files_dir.is_dir():
         for path in settings.files_dir.glob("*.pdf"):
-            if path.stem not in hashes and _unlink(path):
+            if path.stem not in hashes and _settled(path, now) and _unlink(path):
                 removed += 1
     run_ids = repo.all_run_ids(conn)
     if settings.runs_dir.is_dir():
         for path in settings.runs_dir.glob("*.json"):
-            if path.stem not in run_ids and _unlink(path):
+            if path.stem not in run_ids and _settled(path, now) and _unlink(path):
                 removed += 1
     if settings.tmp_dir.is_dir():
         for path in settings.tmp_dir.iterdir():
-            if path.is_file() and _unlink(path):
+            if path.is_file() and _settled(path, now) and _unlink(path):
                 removed += 1
     return removed

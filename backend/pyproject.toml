@@ -7,15 +7,15 @@ license = "MIT"
 requires-python = ">=3.12"
 authors = [{ name = "renjik1926-dev" }]
 dependencies = [
-    "anthropic>=1.15.0",
+    "anthropic>=2.2.0",
     "dateparser>=1.4.3",
-    "fastapi>=0.146.0",
+    "fastapi>=0.161.1",
     "icalendar>=7.3.0",
     "pdfplumber>=0.11.10",
     "platformdirs>=4.13.5",
     "pydantic>=2.14.1",
-    "pydantic-settings>=2.16.0",
-    "python-dateutil>=2.9.0.post0",
+    "pydantic-settings>=2.16.1",
+    "python-dateutil>=3.0.0",
     "python-multipart>=0.0.32",
     "pyyaml>=6.0.3",
     "rapidfuzz>=3.14.6",
@@ -33,17 +33,17 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "httpx>=0.28.1",
-    "hypothesis>=6.170.2",
+    "hypothesis>=6.170.8",
     "mypy>=2.4.0",
-    "pypdf>=6.21.1",
+    "pypdf>=6.21.2",
     "pytest>=9.1.1",
     "pytest-cov>=7.1.0",
-    "ruff>=0.17.1",
-    "types-python-dateutil>=2.9.0.20260807",
+    "ruff>=0.17.2",
+    "types-python-dateutil>=2.9.0.20261021",
     "types-pyyaml>=6.0.12.20260906",
 ]
 fixtures = [
-    "playwright==1.56.0",
+    "playwright==1.64.1",
 ]
 
 [tool.hatch.build.targets.wheel]
